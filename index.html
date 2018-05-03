@@ -12,7 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.2.4/plyr.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	 crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+	 crossorigin="anonymous">
 	<!--Scripts-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" /></script>
@@ -171,48 +172,51 @@
 		<!--Feature Image Starts Here-->
 		<div class="menu-container parallax-container feature-image">
 			<div class="parallax"><img src="https://om4.com.au/wp-content/uploads/grapes.jpg"></div>
-		</div>
-		<!--Feature Image Ends Here-->
+			<div class="splitview skewed split_image_view">
 
-
-
-		<!--Feature Image Starts Here-->
-		<div class="splitview skewed">
 			<div class="panel bottom">
 				<div class="content">
-					<div class="description">
-						<h1>The original image.</h1>
-						<p>This is how the image looks like before applying a duotone effect.</p>
-					</div>
 
-					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original">
+					<img src="./assets/feature-image-1.png" class="bottom_image" alt="Original">
+
+					<div class="description-bottom">
+						<p>كان النبي صلى الله عليه وآله وسلم إذا أفطر قال: اللهم لك صمت وعلى رزقك أفطرت ۔(رواه أبو داود)
+
+						</p>
+						<p>
+							قال رسول الله صلى الله تعالى عليه وآله وسلم: لا يزالُ الناسُ بخيرٍ، ما عَجَّلُوْا الفِطْرَ (متفق عليه)۔						</p>
+					</div>
 				</div>
 			</div>
 
 			<div class="panel top">
 				<div class="content">
-					<div class="description">
-						<h1>The duotone image.</h1>
-						<p>This is how the image looks like after applying a duotone effect.</p>
+					<div class="description-top">
+						<p>قال النبي صلى الله تعالى عليه وآله وسلم: إن الله عز وجل وملائكته يُصلُّون على المتَسَحِّرِين (ذكره أحمد بن حنبل في مسندہ)۔
+						</p>
+						<p>
+							قال النبي صلى الله عليه وآله وسلم: عليكم بغداء السحور فإنه هو الغداء المبارك (ذكره النسائي في سننه)
+						</p>
 					</div>
-
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrdeVlnc9fvsK12cG_9Wscxi_tGmonwQ2MRDmnA0-M9rWR_0D" alt="Duotone">
+					<img src="./assets/feature-image-2.jpg" class="top_image" alt="Duotone">
 				</div>
 			</div>
 
 			<div class="handle"></div>
 		</div>
+		</div>
 		<!--Feature Image Ends Here-->
+
 
 		<!--Book Shelf Start here-->
 		<div class="book_shelf_container container">
 			<h2 class="heading">رف الكتب</h2>
 
 			<div class="books">
-				<img src="./assets/bt64.jpg">
-				<img src="./assets/bt212.jpg">
-				<img src="./assets/bt249.jpg">
-				<img src="./assets/bt365.jpg">
+				<a href="https://www.arabicdawateislami.net/bookslibrary/3507" target="_blank"><img src="./assets/bt64.jpg"></a>
+				<a href="https://www.arabicdawateislami.net/bookslibrary/3466" target="_blank"><img src="./assets/bt212.jpg"></a>
+				<a href="https://www.arabicdawateislami.net/bookslibrary/3465" target="_blank"><img src="./assets/bt249.jpg"></a>
+				<a href="https://www.arabicdawateislami.net/bookslibrary/3296" target="_blank"><img src="./assets/bt365.jpg"></a>
 			</div>
 		</div>
 		<!--Book Shelf End here-->
@@ -312,16 +316,327 @@
 
 		<!--Image Gallary Ends Here-->
 
-		<!--Footer Starts Here-->
-		<div class="page_footer">
-			<div class="page_footer_innerContainer container">
-				<h4 style="color:#fff">روابط</h4>
-				<p>تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها البرنامج الجديد والحصري ” من ارض النيلين” والذي تعرض من خلاله مجموعة قيمة
-					من المحاضرات للحبيب علي زين العابدين الجفري في رحلته التي قام بها الى ارض السودان , حيث يتطرق الحبيب علي الجفري في هذه
-					المحاضرات</p>
+		<!--Video Gallary Starts Here-->
+
+		<div class="container">
+			<h2 class="heading">الوسائط</h2>
+			<div class="video_inner_container">
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-1">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-2">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-3">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Card>>>01-->
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-4">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-5">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-6">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-7">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Card>>>01-->
+				<div class="example-2 card">
+					<div class="wrapper card-8">
+						<div class="header">
+							
+							<ul class="menu-content">
+								<li>
+									<a href="#" class="fa fa-bookmark-o a_link"></a>
+								</li>
+								<li><a href="#" class="fa fa-heart-o a_link"><span>18</span></a></li>
+								<li><a href="#" class="fa fa-comment-o a_link"><span>3</span></a></li>
+							</ul>
+						</div>
+						<div class="data">
+							<div class="content">
+								<span class="author">Jane Doe</span>
+								<h1 class="title heading_one"><a href="#" class="a_link">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها </a></h1>
+								<p class="text">تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها .</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<!--Blogs Section start here-->
+
+		<div class="blog_container container">
+			<h2 class="heading">المدونات</h2>
+			<div class="blog_inner_container">
+
+				<!--Blog**01-->
+				<div class="blog-container z-depth-5">
+					<div class="blog-header">
+						<div class="blog-cover blog-cover-image-1">
+						</div>
+					</div>
+					<div class="blog-body">
+						<div class="blog-title">
+							<h4><a href="#">الدعوة إلى الله في باكستان</a></h4>
+						</div>
+						<div class="blog-summary">
+							<p>إن القرآن الكريم هو المنهج الرباني الذي أنزله سبحانه وتعالى إلى البشرية حتى يكون لهم دستوراً ومرشداً لتحقيق سعادتهم على هذه المعمورة، وبما أنه سبحانه وتعالى الخالق لهذا الوجود كله بما فيه، ﴿اللَّهُ خَالِقُ كُلِّ شَيْءٍ ۖ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ وَكِيلٌ﴾ فهو أعلم بما يصلحه وبما يفسده،۔۔۔..</p>
+						</div>
+						<div class="blog-tags">
+							<ul>
+								<li><a href="#">حرية تطبيق الإسلام</a></li>
+								<li><a href="#">شعار باكستان</a></li>
+								<li><a href="#">علم باكستان</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="blog-footer">
+					</div>
+				</div>
+
+				<!--Blog**02-->
+				<div class="blog-container z-depth-5">
+					<div class="blog-header">
+						<div class="blog-cover blog-cover-image-2">
+						</div>
+					</div>
+					<div class="blog-body">
+						<div class="blog-title">
+							<h4><a href="#">القرآن...سفينة النجاة</a></h4>
+						</div>
+						<div class="blog-summary">
+							<p>مقبل أن يودع المسلم شهر رمضان المبارك سائلاً المولى سبحانه القبول، عليه ألا ينسى دفع زكاة الفطر التي افترضها الحبيب صلى الله تعالى عليه وآله وسلم على الصائمين، فإن آخر وقت يمكنه أن يدفعها فيه قبيل صلاة العيد. عن ابن عباس رضي الله عنهما قال: ((فرض رسول الله صلى الله تعالى عليه وآله وسلم زكاة الفطر طهرةً ۔۔۔للصائم من اللغو والرفث،</p>
+						</div>
+						<div class="blog-tags">
+							<ul>
+								<li><a href="#">حرية تطبيق الإسلام</a></li>
+								<li><a href="#">شعار باكستان</a></li>
+								<li><a href="#">علم باكستان</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="blog-footer">
+					</div>
+				</div>
+
+				<!--Blog**03-->
+				<div class="blog-container z-depth-5">
+					<div class="blog-header">
+						<div class="blog-cover blog-cover-image-3">
+						</div>
+					</div>
+					<div class="blog-body">
+						<div class="blog-title">
+							<h4><a href="#">ماذا بعد رمضان؟</a></h4>
+						</div>
+						<div class="blog-summary">
+							<p>ما أجمل وطننا باكستان! ما أعزه وأغلاه! كم نجد فيه من حرية لتطبيق الإسلام!؟ حسب ظن كثير من الناس فإنَّ باكستان تعتبر
+								أكثر دولة من دول العالم فيها حرية لتطبيق الإسلام۔۔۔..</p>
+						</div>
+						<div class="blog-tags">
+							<ul>
+								<li><a href="#">حرية تطبيق الإسلام</a></li>
+								<li><a href="#">شعار باكستان</a></li>
+								<li><a href="#">علم باكستان</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="blog-footer">
+					</div>
+				</div>
+
+				<!--Blog**04-->
+				<div class="blog-container z-depth-5">
+					<div class="blog-header">
+						<div class="blog-cover blog-cover-image-4">
+						</div>
+					</div>
+					<div class="blog-body">
+						<div class="blog-title">
+							<h4><a href="#">اغتنام شهر رمضان بالطاعات</a></h4>
+						</div>
+						<div class="blog-summary">
+							<p>أحبتي في الله: أنعم الله تعالى علينا بمحطة إيمانية نطهر فيها قلوبنا، ونغسل فيها أرواحنا، ونشحن فيها إيماننا، ونرفع للعبادة هِممنا، إنها شهر رمضان المبارك، فطوبى لمن اجتهد فيه واغتنم... والحبيب صلى الله تعالى عليه وآله وسلم كان يبشر أصحابه رضوان الله تعالى عليهم بهذا الشهر الفضيل،۔۔..</p>
+						</div>
+						<div class="blog-tags">
+							<ul>
+								<li><a href="#">حرية تطبيق الإسلام</a></li>
+								<li><a href="#">شعار باكستان</a></li>
+								<li><a href="#">علم باكستان</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="blog-footer">
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<!--Blogs Section ends here-->
+
+
+
+		<!--Video Gallary Ends Here-->
+		<!--Footer Starts Here-->
+		<!--<div class="page_footer">
+		<div class="page_footer_innerContainer container">
+			<h4 style="color:#fff">روابط</h4>
+			<p>تقدم شاشة قناة الارث النبوي الفضائية لمشاهديها البرنامج الجديد والحصري ” من ارض النيلين” والذي تعرض من خلاله مجموعة قيمة
+				من المحاضرات للحبيب علي زين العابدين الجفري في رحلته التي قام بها الى ارض السودان , حيث يتطرق الحبيب علي الجفري في هذه
+				المحاضرات
+			</p>
+		</div>
+	</div>-->
 		<!--Footer Ends Here-->
+	</div>
 	</div>
 	<script>
 		$(document).ready(function () {

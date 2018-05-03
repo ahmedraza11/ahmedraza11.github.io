@@ -1,10 +1,13 @@
 @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
+
 body{
    margin:0px;
     padding: 0px;
     overflow-x: hidden;
     /*background:#E3DFD2;box-shadow: inset 0 0 20vmin 0 #585247;*/
+    font-family: 'Droid Arabic Kufi', serif; 
+    
 }
 .container{
   width: 85% !important;
@@ -25,9 +28,10 @@ hr{
   width: 100%;
   height: auto;
   background-color: #5B3256;
-  color:#fff;
+  color:#FFC400;
   padding: 20px;
-  font-size: 35px;    
+  font-size: 35px;
+  border-left: solid 12px #FFC400;    
 }
 .page_footer{
     width: 100%;
@@ -71,7 +75,7 @@ p{
 }
 .menu-container{
     width: 100%;
-    height: 600px;
+    height: 1000px;
 }
 
 #introduction-container{
@@ -104,9 +108,8 @@ p{
 }
 
 .feature-image{
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(82.4, 78.8, 1.6, 0.5);
 }
-
 /************
 Slider Styles Starts here
 ****************/
@@ -408,48 +411,79 @@ Feature Image Styles Starts Here
         width: 100vw;
         min-height: 45vw;
         color: #FFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .panel .description {
-        width: 25%;
+    .panel .description-bottom {
+        width: 55%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
-    }
-
-    .panel img {
-        box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
-        width: 35%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-
-.bottom {
-    background-color: #fff;
-    z-index: 1;
-}
-
-    .bottom .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(43.9, 57.6, 91.8,0.5);
+        padding: 20px;
+        border-radius: 30px;
         right: 5%;
     }
 
-.top {
-    background-color: #2A548B;
-    z-index: 2;
-    width: 50vw;
-
-    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
-    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+    .description-bottom>p{
+      color:#E9D677;
+      font-size: 25px;
+    }
+    .bottom_image {
+        width: 20%;
+        position: absolute;
+        top: 45%;
+        left:20%;
+        transform: translate(-50%, -50%);
+    }
+    .top_image{
+        width: 20%;
+        position: absolute;
+        top: 45%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+.bottom {
+    background-color: transparent;
+    z-index: 1;
 }
 
+
+
+.top {
+    background-color: #5B3256;
+    z-index: 2;
+}
     .top .description {
+        right: 5%;
+    }
+        .panel .description-top {
+        width: 55%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba(43.9, 57.6, 91.8,0.5);
+        padding: 20px;
+        border-radius: 30px;
         left: 5%;
     }
 
+    .description-top>p{
+      color:#fff;
+      font-size: 25px;
+    }
+    
 /* Handle. */
 .handle {
     height: 100%;
@@ -488,6 +522,10 @@ Feature Image Styles Starts Here
     body {
         font-size: 75%;
     }
+}
+
+.panel-bottom-container{
+  background-image: url(https://om4.com.au/wp-content/uploads/grapes.jpg);
 }
 
 /************
@@ -676,4 +714,443 @@ Image Gallary Styles Starts Here
 }
 /************
 Image Gallary Styles Ends Here
+****************/
+
+
+/************
+Video Gallary Styles Starts Here
+****************/
+
+.video_inner_container{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.a_link {
+  text-decoration: none;
+}
+
+.heading_one {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+.row {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.card {
+  width: 250px;
+}
+.card:hover{
+  cursor: pointer;
+}
+
+.card .menu-content {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.card .menu-content::before, .card .menu-content::after {
+  content: '';
+  display: table;
+}
+.card .menu-content::after {
+  clear: both;
+}
+.card .menu-content li {
+  display: inline-block;
+}
+.card .menu-content a {
+  color: #fff;
+}
+.card .menu-content span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.card .wrapper {
+  background-color: #fff;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+.card .wrapper:hover .data {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+
+        
+}
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(calc(70px + 1em));
+          transform: translateY(calc(70px + 1em));
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.card .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.card .author {
+  font-size: 12px;
+}
+.card .title {
+  margin-top: 10px;
+}
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+.card input[type='checkbox'] {
+  display: none;
+}
+.card input[type='checkbox']:checked + .menu-content {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+}
+
+
+.example-2 .card-1 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-2.png) center/cover no-repeat;
+}
+.example-2 .card-2 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-3.png) center/cover no-repeat;
+}
+.example-2 .card-3 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-4.png) center/cover no-repeat;
+}
+.example-2 .card-4 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-5.png) center/cover no-repeat;
+}
+.example-2 .card-5 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-6.png) center/cover no-repeat;
+}
+.example-2 .card-6 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-2.png) center/cover no-repeat;
+}
+.example-2 .card-7 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Manqabat-About-Imam-e-Azam.jpg) center/cover no-repeat;
+}
+.example-2 .card-8 {
+  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/event-page-faizan-e-imam-azam-Featured-Video.jpg) center/cover no-repeat;
+}
+
+.example-2 .wrapper:hover .menu-content span {
+  -webkit-transform: translate(-50%, -10px);
+          transform: translate(-50%, -10px);
+  opacity: 1;
+}
+.example-2 .header {
+  color: #fff;
+}
+.example-2 .header::before, .example-2 .header::after {
+  content: '';
+  display: table;
+}
+.example-2 .header::after {
+  clear: both;
+}
+.example-2 .header .date {
+  float: left;
+  font-size: 12px;
+}
+.example-2 .menu-content {
+  float: right;
+}
+.example-2 .menu-content li {
+  margin: 0 5px;
+  position: relative;
+}
+.example-2 .menu-content span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+.example-2 .data {
+  color: #fff;
+  -webkit-transform: translateY(calc(70px + 4em));
+          transform: translateY(calc(70px + 4em));
+}
+.example-2 .title a {
+  color: #fff;
+}
+.example-2 .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+.example-2 .button::after {
+  content: '\2192';
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+.example-2 .button:hover::after {
+  -webkit-transform: translate(5px, -50%);
+          transform: translate(5px, -50%);
+  opacity: 1;
+}
+
+
+/************
+Video Gallary Styles Ends Here
+****************/
+
+
+/************
+Blog Styles Starts Here
+****************/
+.blog_container{
+  margin-bottom: 20px;
+}
+
+.blog_inner_container{
+}
+
+
+
+.blog-container {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0 4px 2px -2px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin: 48px auto;
+  width: 20rem;
+}
+@media screen and (min-width: 480px) {
+  .blog-container {
+    width: 28rem;
+  }
+ 
+}
+@media screen and (min-width: 767px) {
+  .blog-container {
+    width: 40rem;
+  }
+}
+
+@media screen and (min-width: 959px) {
+  .blog-container {
+    width: 50rem;
+  }
+  
+}
+@media screen and (max-width: 959px) {
+.card{
+    width: 180px;
+  }
+
+}
+
+.blog-container a {
+  text-decoration: none;
+  transition: .25s ease;
+}
+.blog-container a:hover {
+  color: #90C604;
+}
+
+.blog-cover {
+  background: url("https://data2.dawateislami.net/static/images/main-website/blog/arabic/20-14august-2017.jpg");
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  height: 15rem;
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
+}
+
+.blog-cover-image-1{
+  background: url("https://data2.dawateislami.net/static/images/main-website/blog/arabic/20-14august-2017.jpg");
+  background-size: cover;
+}
+.blog-cover-image-2{
+  background: url("https://data2.dawateislami.net/static/images/main-website/blog/arabic/19-alquran-safeenatun-nijat.jpg");
+  background-size: cover;
+}
+.blog-cover-image-3{
+  background: url("https://data2.dawateislami.net/static/images/main-website/blog/arabic/14-maza-bad-ramadan.jpg");
+  background-size: cover;
+}
+.blog-cover-image-4{
+  background: url("https://data2.dawateislami.net/static/images/main-website/blog/arabic/13-nafhaat-e-ramadan.jpg");
+  background-size: cover;
+}
+
+.blog-author,
+.blog-author--no-cover {
+  margin: 0 auto;
+  padding-top: .125rem;
+  width: 80%;
+}
+
+.blog-author h3::before,
+.blog-author--no-cover h3::before {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/russ.jpeg");
+  background-size: cover;
+  border-radius: 50%;
+  content: " ";
+  display: inline-block;
+  height: 32px;
+  margin-right: .5rem;
+  position: relative;
+  top: 8px;
+  width: 32px;
+}
+
+.blog-author h3 {
+  color: #fff;
+  font-weight: 100;
+}
+
+.blog-author--no-cover h3 {
+  color: #999999;
+  font-weight: 100;
+}
+
+.blog-body {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.video-body {
+  height: 100%;
+  width: 100%;
+}
+
+.blog-title h1 a {
+  color: #333;
+  font-weight: 100;
+}
+
+.blog-summary p {
+  color: #4d4d4d;
+}
+
+.blog-tags ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-tags li + li {
+  margin-left: .5rem;
+}
+
+.blog-tags a {
+  border: 1px solid #999999;
+  border-radius: 3px;
+  color: #999999;
+  font-size: .75rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0 .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 5rem;
+}
+
+.blog-footer {
+  border-top: 1px solid #e6e6e6;
+  margin: 0 auto;
+  padding-bottom: .125rem;
+  width: 80%;
+}
+
+.blog-footer ul {
+  list-style: none;
+  display: flex;
+  flex: row wrap;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+
+.blog-footer li:first-child {
+  margin-right: auto;
+}
+
+.blog-footer li + li {
+  margin-left: .5rem;
+}
+
+.blog-footer li {
+  color: #999999;
+  font-size: .75rem;
+  height: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+}
+.blog-footer li a {
+  color: #999999;
+}
+
+.comments {
+  margin-right: 1rem;
+}
+
+.published-date {
+  border: 1px solid #999999;
+  border-radius: 3px;
+  padding: 0 .5rem;
+}
+
+.numero {
+  position: relative;
+  top: -0.5rem;
+}
+
+.icon-star,
+.icon-bubble {
+  fill: #999999;
+  height: 24px;
+  margin-right: .5rem;
+  transition: .25s ease;
+  width: 24px;
+}
+.icon-star:hover,
+.icon-bubble:hover {
+  fill: #ff4d4d;
+}
+
+
+
+
+
+/************
+Blog Styles Ends Here
 ****************/
