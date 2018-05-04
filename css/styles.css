@@ -933,12 +933,8 @@ Blog Styles Starts Here
 .blog_container{
   margin-bottom: 20px;
 }
-
 .blog_inner_container{
 }
-
-
-
 .blog-container {
   background: #fff;
   border-radius: 5px;
@@ -946,7 +942,6 @@ Blog Styles Starts Here
   font-family: "adelle-sans", sans-serif;
   font-weight: 100;
   margin: 48px auto;
-  /*width: 20rem;*/
 }
 @media screen and (min-width: 480px) {
   .blog-container {
