@@ -415,12 +415,12 @@ Feature Image Styles Starts Here
         min-height: 45vw;
         color: #FFF;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
 
-    .panel .description-bottom {
+    .description-bottom {
         width: 55%;
         position: absolute;
         top: 50%;
@@ -437,7 +437,7 @@ Feature Image Styles Starts Here
 
     .description-bottom>p{
       color:#E9D677;
-      font-size: 25px;
+      font-size: 22px;
     }
     .bottom_image {
         width: 20%;
@@ -1283,7 +1283,25 @@ Footer styles
     flex-direction: column;
     justify-content: center;
 }
+
+@media screen and (max-width: 530px){
+.description-bottom>p{
+      color:#E9D677;
+      font-size: 18px;
+      right: 0px;
+      bottom: 10px;
+}
+
+.content{
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+
+
 .footer_contact_container>p{
   font-size: 18px;
 }
 }
+
