@@ -17,7 +17,7 @@ h3{
     text-align: center;
 }
 
-h1 ,h2, h3, h4, h5, h6, p{
+h1 ,h2, h3, h4, h5, h6, p, .intro_list_item{
     text-align: right;
     font-family: 'Droid Arabic Kufi', serif; 
 }
