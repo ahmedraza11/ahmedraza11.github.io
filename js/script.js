@@ -197,17 +197,6 @@ $(document).ready(function() {
   pages.eq(index).addClass('is-active');
 });
 
-/* Lazyloading
-$('.slideshow').each(function(){
-  var slideshow=$(this);
-  var images=slideshow.find('.image').not('.is-loaded');
-  images.on('loaded',function(){
-    var image=$(this);
-    var slide=image.closest('.slide');
-    slide.addClass('is-loaded');
-  });
-*/
-
 var timeout=setTimeout(function(){
   slideshowNext(slideshow,false,true);
 },slideshowDuration);
@@ -221,14 +210,12 @@ if($('.main-content .slideshow').length > 1) {
 
 
 //////////////////Feature Image Scripts///////////////////
-
 document.addEventListener('DOMContentLoaded', function() {
     var parent = document.querySelector('.splitview'),
         topPanel = parent.querySelector('.top'),
         handle = parent.querySelector('.handle'),
         skewHack = 0,
         delta = 0;
-
     // If the parent has .skewed class, set the skewHack var.
     if (parent.className.indexOf('skewed') != -1) {
         skewHack = 1000;
