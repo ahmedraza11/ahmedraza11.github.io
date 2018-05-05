@@ -1,8 +1,8 @@
 var slideshowDuration = 4000;
-var slideshow=$('.main-content .slideshow');
+var slideshow = $('.main-content .slideshow');
 
-function slideshowSwitch(slideshow,index,auto){
-  if(slideshow.data('wait')) return;
+function slideshowSwitch(slideshow, index, auto) {
+  if (slideshow.data('wait')) return;
 
   var slides = slideshow.find('.slide');
   var pages = slideshow.find('.pagination');
@@ -11,273 +11,280 @@ function slideshowSwitch(slideshow,index,auto){
   var newSlide = slides.eq(index);
   var newSlideImage = newSlide.find('.image-container');
   var newSlideContent = newSlide.find('.slide-content');
-  var newSlideElements=newSlide.find('.caption > *');
-  if(newSlide.is(activeSlide))return;
+  var newSlideElements = newSlide.find('.caption > *');
+  if (newSlide.is(activeSlide)) return;
 
   newSlide.addClass('is-new');
-  var timeout=slideshow.data('timeout');
+  var timeout = slideshow.data('timeout');
   clearTimeout(timeout);
-  slideshow.data('wait',true);
-  var transition=slideshow.attr('data-transition');
-  if(transition=='fade'){
+  slideshow.data('wait', true);
+  var transition = slideshow.attr('data-transition');
+  if (transition == 'fade') {
     newSlide.css({
-      display:'block',
-      zIndex:2
+      display: 'block',
+      zIndex: 2
     });
     newSlideImage.css({
-      opacity:0
+      opacity: 0
     });
 
-    TweenMax.to(newSlideImage,1,{
-      alpha:1,
-      onComplete:function(){
+    TweenMax.to(newSlideImage, 1, {
+      alpha: 1,
+      onComplete: function () {
         newSlide.addClass('is-active').removeClass('is-new');
         activeSlide.removeClass('is-active');
-        newSlide.css({display:'',zIndex:''});
-        newSlideImage.css({opacity:''});
+        newSlide.css({ display: '', zIndex: '' });
+        newSlideImage.css({ opacity: '' });
         slideshow.find('.pagination').trigger('check');
-        slideshow.data('wait',false);
-        if(auto){
-          timeout=setTimeout(function(){
-            slideshowNext(slideshow,false,true);
-          },slideshowDuration);
-          slideshow.data('timeout',timeout);}}});
+        slideshow.data('wait', false);
+        if (auto) {
+          timeout = setTimeout(function () {
+            slideshowNext(slideshow, false, true);
+          }, slideshowDuration);
+          slideshow.data('timeout', timeout);
+        }
+      }
+    });
   } else {
-    if(newSlide.index()>activeSlide.index()){
-      var newSlideRight=0;
-      var newSlideLeft='auto';
-      var newSlideImageRight=-slideshow.width()/8;
-      var newSlideImageLeft='auto';
-      var newSlideImageToRight=0;
-      var newSlideImageToLeft='auto';
-      var newSlideContentLeft='auto';
-      var newSlideContentRight=0;
-      var activeSlideImageLeft=-slideshow.width()/4;
+    if (newSlide.index() > activeSlide.index()) {
+      var newSlideRight = 0;
+      var newSlideLeft = 'auto';
+      var newSlideImageRight = -slideshow.width() / 8;
+      var newSlideImageLeft = 'auto';
+      var newSlideImageToRight = 0;
+      var newSlideImageToLeft = 'auto';
+      var newSlideContentLeft = 'auto';
+      var newSlideContentRight = 0;
+      var activeSlideImageLeft = -slideshow.width() / 4;
     } else {
-      var newSlideRight='';
-      var newSlideLeft=0;
-      var newSlideImageRight='auto';
-      var newSlideImageLeft=-slideshow.width()/8;
-      var newSlideImageToRight='';
-      var newSlideImageToLeft=0;
-      var newSlideContentLeft=0;
-      var newSlideContentRight='auto';
-      var activeSlideImageLeft=slideshow.width()/4;
+      var newSlideRight = '';
+      var newSlideLeft = 0;
+      var newSlideImageRight = 'auto';
+      var newSlideImageLeft = -slideshow.width() / 8;
+      var newSlideImageToRight = '';
+      var newSlideImageToLeft = 0;
+      var newSlideContentLeft = 0;
+      var newSlideContentRight = 'auto';
+      var activeSlideImageLeft = slideshow.width() / 4;
     }
 
     newSlide.css({
-      display:'block',
-      width:0,
-      right:newSlideRight,
-      left:newSlideLeft
-      ,zIndex:2
+      display: 'block',
+      width: 0,
+      right: newSlideRight,
+      left: newSlideLeft
+      , zIndex: 2
     });
 
     newSlideImage.css({
-      width:slideshow.width(),
-      right:newSlideImageRight,
-      left:newSlideImageLeft
+      width: slideshow.width(),
+      right: newSlideImageRight,
+      left: newSlideImageLeft
     });
 
     newSlideContent.css({
-      width:slideshow.width(),
-      left:newSlideContentLeft,
-      right:newSlideContentRight
+      width: slideshow.width(),
+      left: newSlideContentLeft,
+      right: newSlideContentRight
     });
 
     activeSlideImage.css({
-      left:0
+      left: 0
     });
 
-    TweenMax.set(newSlideElements,{y:20,force3D:true});
-    TweenMax.to(activeSlideImage,1,{
-      left:activeSlideImageLeft,
-      ease:Power3.easeInOut
+    TweenMax.set(newSlideElements, { y: 20, force3D: true });
+    TweenMax.to(activeSlideImage, 1, {
+      left: activeSlideImageLeft,
+      ease: Power3.easeInOut
     });
 
-    TweenMax.to(newSlide,1,{
-      width:slideshow.width(),
-      ease:Power3.easeInOut
+    TweenMax.to(newSlide, 1, {
+      width: slideshow.width(),
+      ease: Power3.easeInOut
     });
 
-    TweenMax.to(newSlideImage,1,{
-      right:newSlideImageToRight,
-      left:newSlideImageToLeft,
-      ease:Power3.easeInOut
+    TweenMax.to(newSlideImage, 1, {
+      right: newSlideImageToRight,
+      left: newSlideImageToLeft,
+      ease: Power3.easeInOut
     });
 
-    TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
+    TweenMax.staggerFromTo(newSlideElements, 0.8, { alpha: 0, y: 60 }, { alpha: 1, y: 0, ease: Power3.easeOut, force3D: true, delay: 0.6 }, 0.1, function () {
       newSlide.addClass('is-active').removeClass('is-new');
       activeSlide.removeClass('is-active');
       newSlide.css({
-        display:'',
-        width:'',
-        left:'',
-        zIndex:''
+        display: '',
+        width: '',
+        left: '',
+        zIndex: ''
       });
 
       newSlideImage.css({
-        width:'',
-        right:'',
-        left:''
+        width: '',
+        right: '',
+        left: ''
       });
 
       newSlideContent.css({
-        width:'',
-        left:''
+        width: '',
+        left: ''
       });
 
       newSlideElements.css({
-        opacity:'',
-        transform:''
+        opacity: '',
+        transform: ''
       });
 
       activeSlideImage.css({
-        left:''
+        left: ''
       });
 
       slideshow.find('.pagination').trigger('check');
-      slideshow.data('wait',false);
-      if(auto){
-        timeout=setTimeout(function(){
-          slideshowNext(slideshow,false,true);
-        },slideshowDuration);
-        slideshow.data('timeout',timeout);
+      slideshow.data('wait', false);
+      if (auto) {
+        timeout = setTimeout(function () {
+          slideshowNext(slideshow, false, true);
+        }, slideshowDuration);
+        slideshow.data('timeout', timeout);
       }
     });
   }
 }
 
-function slideshowNext(slideshow,previous,auto){
-  var slides=slideshow.find('.slide');
-  var activeSlide=slides.filter('.is-active');
-  var newSlide=null;
-  if(previous){
-    newSlide=activeSlide.prev('.slide');
-    if(newSlide.length === 0) {
-      newSlide=slides.last();
+function slideshowNext(slideshow, previous, auto) {
+  var slides = slideshow.find('.slide');
+  var activeSlide = slides.filter('.is-active');
+  var newSlide = null;
+  if (previous) {
+    newSlide = activeSlide.prev('.slide');
+    if (newSlide.length === 0) {
+      newSlide = slides.last();
     }
   } else {
-    newSlide=activeSlide.next('.slide');
-    if(newSlide.length==0)
-      newSlide=slides.filter('.slide').first();
+    newSlide = activeSlide.next('.slide');
+    if (newSlide.length == 0)
+      newSlide = slides.filter('.slide').first();
   }
 
-  slideshowSwitch(slideshow,newSlide.index(),auto);
+  slideshowSwitch(slideshow, newSlide.index(), auto);
 }
 
-function homeSlideshowParallax(){
-  var scrollTop=$(window).scrollTop();
-  if(scrollTop>windowHeight) return;
-  var inner=slideshow.find('.slideshow-inner');
-  var newHeight=windowHeight-(scrollTop/2);
-  var newTop=scrollTop*0.8;
+function homeSlideshowParallax() {
+  var scrollTop = $(window).scrollTop();
+  if (scrollTop > windowHeight) return;
+  var inner = slideshow.find('.slideshow-inner');
+  var newHeight = windowHeight - (scrollTop / 2);
+  var newTop = scrollTop * 0.8;
 
   inner.css({
-    transform:'translateY('+newTop+'px)',height:newHeight
+    transform: 'translateY(' + newTop + 'px)', height: newHeight
   });
 }
 
-$(document).ready(function() {
- $('.slide').addClass('is-loaded');
+$(document).ready(function () {
+  $('.slide').addClass('is-loaded');
 
- $('.slideshow .arrows .arrow').on('click',function(){
-  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
+  $('.slideshow .arrows .arrow').on('click', function () {
+    slideshowNext($(this).closest('.slideshow'), $(this).hasClass('prev'));
+  });
+
+  $('.slideshow .pagination .item').on('click', function () {
+    slideshowSwitch($(this).closest('.slideshow'), $(this).index());
+  });
+
+  $('.slideshow .pagination').on('check', function () {
+    var slideshow = $(this).closest('.slideshow');
+    var pages = $(this).find('.item');
+    var index = slideshow.find('.slides .is-active').index();
+    pages.removeClass('is-active');
+    pages.eq(index).addClass('is-active');
+  });
+
+  var timeout = setTimeout(function () {
+    slideshowNext(slideshow, false, true);
+  }, slideshowDuration);
+
+  slideshow.data('timeout', timeout);
 });
 
- $('.slideshow .pagination .item').on('click',function(){
-  slideshowSwitch($(this).closest('.slideshow'),$(this).index());
-});
-
- $('.slideshow .pagination').on('check',function(){
-  var slideshow=$(this).closest('.slideshow');
-  var pages=$(this).find('.item');
-  var index=slideshow.find('.slides .is-active').index();
-  pages.removeClass('is-active');
-  pages.eq(index).addClass('is-active');
-});
-
-var timeout=setTimeout(function(){
-  slideshowNext(slideshow,false,true);
-},slideshowDuration);
-
-slideshow.data('timeout',timeout);
-});
-
-if($('.main-content .slideshow').length > 1) {
-  $(window).on('scroll',homeSlideshowParallax);
+if ($('.main-content .slideshow').length > 1) {
+  $(window).on('scroll', homeSlideshowParallax);
 }
 
 
 //////////////////Feature Image Scripts///////////////////
-document.addEventListener('DOMContentLoaded', function() {
-    var parent = document.querySelector('.splitview'),
-        topPanel = parent.querySelector('.top'),
-        handle = parent.querySelector('.handle'),
-        skewHack = 0,
-        delta = 0;
-    // If the parent has .skewed class, set the skewHack var.
-    if (parent.className.indexOf('skewed') != -1) {
-        skewHack = 1000;
-    }
+document.addEventListener('DOMContentLoaded', function () {
+  var parent = document.querySelector('.splitview'),
+    topPanel = parent.querySelector('.top'),
+    handle = parent.querySelector('.handle'),
+    skewHack = 0,
+    delta = 0;
+  // If the parent has .skewed class, set the skewHack var.
+  if (parent.className.indexOf('skewed') != -1) {
+    skewHack = 1000;
+  }
 
-    parent.addEventListener('mousemove', function(event) {
-        // Get the delta between the mouse position and center point.
-        delta = (event.clientX - window.innerWidth / 2) * 0.5;
+  parent.addEventListener('mousemove', function (event) {
+    // Get the delta between the mouse position and center point.
+    delta = (event.clientX - window.innerWidth / 2) * 0.5;
 
-        // Move the handle.
-        handle.style.left = event.clientX + delta + 'px';
+    // Move the handle.
+    handle.style.left = event.clientX + delta + 'px';
 
-        // Adjust the top panel width.
-        topPanel.style.width = event.clientX + skewHack + delta + 'px';
-    });
+    // Adjust the top panel width.
+    topPanel.style.width = event.clientX + skewHack + delta + 'px';
+  });
 });
 
-	$(document).ready(function () {
-			$('.tooltipped').tooltip();
-		});
-		$(document).ready(function () {
-			$('.carousel').carousel();
-		});
-		$(document).ready(function () {
-			$('.parallax').parallax();
-		});
-		$(document).ready(function () {
-			$('.scrollspy').scrollSpy();
-		});
+$(document).ready(function () {
+  $('.tooltipped').tooltip();
+});
+$(document).ready(function () {
+  $('.carousel').carousel();
+});
+$(document).ready(function () {
+  $('.parallax').parallax();
+});
+$(document).ready(function () {
+  $('.scrollspy').scrollSpy();
+});
 
-		document.addEventListener('DOMContentLoaded', () => {
-			// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-			const player = new Plyr('#player');
+document.addEventListener('DOMContentLoaded', () => {
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#player');
 
-			// Bind event listener
-			function on(selector, type, callback) {
-				document.querySelector(selector).addEventListener(type, callback, false);
-			}
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
 
-			// Play
-			on('.js-play', 'click', () => {
-				player.play();
-			});
+  // Play
+  on('.js-play', 'click', () => {
+    player.play();
+  });
 
-			// Pause
-			on('.js-pause', 'click', () => {
-				player.pause();
-			});
+  // Pause
+  on('.js-pause', 'click', () => {
+    player.pause();
+  });
 
-			// Stop
-			on('.js-stop', 'click', () => {
-				player.stop();
-			});
+  // Stop
+  on('.js-stop', 'click', () => {
+    player.stop();
+  });
 
-			// Rewind
-			on('.js-rewind', 'click', () => {
-				player.rewind();
-			});
+  // Rewind
+  on('.js-rewind', 'click', () => {
+    player.rewind();
+  });
 
-			// Forward
-			on('.js-forward', 'click', () => {
-				player.forward();
-			});
-		});
-    
+  // Forward
+  on('.js-forward', 'click', () => {
+    player.forward();
+  });
+});
+
+$(document).ready(function () {
+  $('.collapsible').collapsible();
+});
+
