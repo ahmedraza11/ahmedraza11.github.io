@@ -123,7 +123,7 @@ p{
 }
 
 .feature-image{
-  background: rgba(82.4, 78.8, 1.6, 0.5);
+  /*background: rgba(82.4, 78.8, 1.6, 0.5);*/
 }
 
 /************
@@ -845,7 +845,7 @@ Video Gallary Styles Starts Here
 
 
 .example-2 .card-1 {
-  background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-2.png) center/cover no-repeat;
+  background: url("./assets/46592.jpg") center/cover no-repeat;
 }
 .example-2 .card-2 {
   background: url(https://events.dawateislami.net/imam-abu-hanifa/img/slising/Imam-e-Azam-3.png) center/cover no-repeat;
@@ -958,7 +958,7 @@ Blog Styles Starts Here
 }
 @media screen and (min-width: 480px) {
   .blog-container {
-    width: 28rem;
+    /*width: 28rem;*/
   }
  
 }
@@ -986,6 +986,34 @@ Blog Styles Starts Here
     width: 250px;
   }
 }
+
+@media screen and (max-width: 670px) {
+.card{
+    width: 90%;
+}
+.description-bottom{
+  width: 90%;
+  right: 5%;
+
+}
+.bottom_image{
+  position: absolute;
+	left: 50%;
+	top: 50%;
+}
+.heading {
+  font-size: 20px;
+}
+.intro_list_item{
+  font-size: 15px;
+}
+.blog-summary p{
+  font-size: 15px;
+}
+}
+
+
+
 
 
 
@@ -1299,6 +1327,11 @@ Footer styles
       font-size: 18px;
       right: 0px;
       bottom: 10px;
+}
+
+@media screen and (max-width: 800px){
+.container{
+      width: 95% !important;
 }
 
 .content{
