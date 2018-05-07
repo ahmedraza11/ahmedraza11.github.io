@@ -579,7 +579,7 @@ a:hover {
   margin-left: 6px;
 }
 .member-title:hover{
-  cursor:pointer;
+  cursor:pointer; 
 }
 /************
 Historical Panel Styles Ends here
@@ -862,7 +862,7 @@ Image Gallary Styles Starts Here
 }
 
 #rig li:hover .rig-img {
-    transform:scale(1.05);
+    transform:scale(1);
 }
         
 /* If have the overlay layer */
@@ -1046,7 +1046,7 @@ Video Gallary Styles Starts Here
 
 
 .example-2 .card-1 {
-  background: url(../assets/mediaGallaryImages/47289.jpg) center/cover;
+  background: url(../assets/mediaGallaryImages/47288.jpg) center/cover;
 }
 .example-2 .card-2 {
   background: url(../assets/mediaGallaryImages/46631.jpg) center/cover no-repeat;
@@ -1222,8 +1222,10 @@ Blog Styles Starts Here
 
 
 .blog-container a {
-  text-decoration: none;
+  text-decoration: none !important;
   transition: .25s ease;
+  color: #039be5;
+  margin-top: 10px;
 }
 .blog-container a:hover {
   color: #90C604;
@@ -1286,6 +1288,7 @@ Blog Styles Starts Here
 }
 
 .blog-body {
+  margin-top: 10px !important;  
   margin: 0 auto;
   width: 80%;
 }
@@ -1523,6 +1526,15 @@ Footer styles
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.member-infos>h1{
+  margin-top: 5px;
+  background-color: #227093;
+  color: #fff;
+  padding: 12px;
+  font-size: 1em !important;
+  border-radius: 0px 30px 0px;    
+  border-left: solid 8px #33d9b2;
 }
 
 @media screen and (max-width: 530px){
