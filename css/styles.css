@@ -915,7 +915,6 @@ Blog Styles Starts Here
 .card{
     width: 180px;
   }
-
 }
 
 @media screen and (max-width: 962px) {
@@ -1485,13 +1484,82 @@ biography styles starts here
 .bio_heading{
   margin-top: 40px;
 }
-  .biography{
+.biography{
     width: 100%;
-    border: 2px solid green;
     padding: 20px;
     margin-top: 30px;
-  }
+    display: flex;
+    flex-direction: row;
+}
+.bio_image{
+  width: 550px;
+}
+.biography_text_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.biography_text_container>a{
+}
+.biography_text_container>a:hover{
+  text-decoration: none;
+}
+.bio_uper_text{
+  color: #5B3256;
+  font-size: 22px !important;
+  text-align: right !important;
+  margin-top: 50px;
+}
+.bio_lower_text{
+  color: #fff;
+  background-color: #5B3256;
+  padding: 20px;
+  border-radius: 20px 0px 20px 0px; 
+  transition: all 1s;
+  font-size: 25px;
+  
+}
 
+.bio_lower_text:hover{
+  color: #5B3256;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 20px 0px 20px 0px;
+  border: 1px solid #5B3256;
+  cursor: pointer; 
+}
+
+@media screen and (max-width: 999px){
+  /*.biography{
+    flex-direction: column; 
+    justify-content: center;
+  }*/
+  .bio_image{
+    width: 450px;
+    align-self: center;
+  }
+  .bio_image_container{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 920px){
+  .biography{
+    flex-direction: column; 
+    justify-content: center;
+  }
+  .bio_image{
+    width: 450px;
+    align-self: center;
+  }
+  .bio_image_container{
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /***************
 biography styles ends here
