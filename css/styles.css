@@ -1623,8 +1623,12 @@ td{
   color: #5B3256;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
+.QA_Table_Link>a{
+  color: #37464F;
+  
+}
 
-.QA_Table_Link:hover{
+.QA_Table_Link>a:hover{
   color: #37464F;
   text-decoration: underline;
   cursor: pointer;  
