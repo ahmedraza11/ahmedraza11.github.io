@@ -946,10 +946,16 @@ Blog Styles Starts Here
 }
 .intro_list_item{
   font-size: 20px;
+
 }
 .blog-summary p{
   font-size: 15px;
 }
+}
+
+.introText{
+  text-align: justify !important;
+  direction: rtl;
 }
 
 
@@ -1558,6 +1564,16 @@ biography styles starts here
     display: flex;
     justify-content: center;
   }
+  .intro_bullets>li{
+    padding-right : 40px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .intro_bullets>li{
+    padding-right: 20px;
+  }
+
 }
 
 /***************
