@@ -29,10 +29,19 @@
 </head>
 
 <body>
-	<sec class="main-page-container">
+
+	<div class="main-page-container">
+
+
+		<!--*******************
+		Main Logo Starts Here
+		*********************-->
 		<div class="logo-container">
 			<img src="./assets/logo.png" class="fadeInDown" width="250px" height="250px" />
 		</div>
+		<!--*******************
+		Main Logo Ends Here
+		*********************-->
 
 
 
@@ -47,6 +56,8 @@
 		<!--*******************
 		Header Image Ends Here
 		*********************-->
+
+
 
 
 
@@ -94,6 +105,8 @@
 
 
 
+
+
 		<!--*******************
 		Introduction Video Starts Here
 		*********************-->
@@ -113,6 +126,7 @@
 		<!--*******************
 		Introduction Video Ends Here
 		*********************-->
+
 
 
 
@@ -219,6 +233,7 @@
 		<!--*******************
 		Historical Events in ramadan End here
 		*********************-->
+
 
 
 
@@ -358,6 +373,8 @@
 
 
 
+
+
 		<!--*******************
 		Image Gallary Starts Here
 		*********************-->
@@ -457,6 +474,7 @@
 		<!--*******************
 		Image Gallary Ends Here
 		*********************-->
+
 
 
 
@@ -1494,27 +1512,24 @@
 		*********************-->
 
 
+	</div>
+	<script>
+		// Historical panel scripts
+		$('.member-title').click(function (e) {
+			console.log("Clicked");
+			$(this).next().slideToggle("slow");
+			$(this).next().next().slideToggle();
+		})
 
-		</div>
-		<script>
-			// Historical panel scripts
-			$('.member-title').click(function (e) {
-				console.log("Clicked");
-				$(this).next().slideToggle("slow");
-				$(this).next().next().slideToggle();
-			})
-
-
-			document.addEventListener('DOMContentLoaded', () => {
-				// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
-				const player = new Plyr('#player');
-
-				// Bind event listener
-				function on(selector, type, callback) {
-					document.querySelector(selector).addEventListener(type, callback, false);
-				}
-			});
-		</script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+			const player = new Plyr('#player');
+			// Bind event listener
+			function on(selector, type, callback) {
+				document.querySelector(selector).addEventListener(type, callback, false);
+			}
+		});
+	</script>
 </body>
 
 </html>
