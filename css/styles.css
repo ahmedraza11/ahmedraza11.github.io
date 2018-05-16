@@ -40,6 +40,10 @@ hr{
   border-radius: 0px 35px 0px;    
 }
 
+.main_top_logo{
+  width: 250px;
+  height: 250px;
+}
 .header>p{
   direction: rtl;
   text-align: justify;
@@ -1297,6 +1301,10 @@ Important Links Start Here
 @media screen and (max-width: 900px){
   .link_item{
      margin-top: 65px;
+  }
+  .main_top_logo{
+    width: 150px;
+    height: 150px;
   }
 }
 
