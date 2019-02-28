@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "homepage": "https://ahmedraza11.github.io/Portfolio.git",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  }
+}
